@@ -111,3 +111,5 @@ body._lock { overflow: hidden; }
 @media (max-width: 1393px) { .main-block__image { width: calc(376px + 477 * ((100vw - 320px) / 1073)); } }
 
 @media (max-width: 1393px) { .main-block__image { height: calc(376px + 477 * ((100vw - 320px) / 1073)); } }
+
+@media (max-width: 991.98px) { .main-block__image { margin: 0 auto; } }
