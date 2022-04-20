@@ -220,7 +220,8 @@ h1, h2, h3, h4, h5, h6 {
       text-decoration: underline; } }
   @media (max-width: 991.98px) {
     .menu__link {
-      font-size: 24px; } }
+      font-size: 24px;
+      color: #fff; } }
 
 .icon-menu {
   margin-left: 15px;
@@ -237,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   .icon-menu__line, .icon-menu::before, .icon-menu::after {
     position: absolute;
     left: 0;
-    height: 10%;
+    height: 2px;
     width: 100%;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
