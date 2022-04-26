@@ -30,7 +30,6 @@
 
 [class^="_icon-"]::before,
 [class*=" _icon-"]::before {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "iconfont" !important;
   speak: never;
   font-style: normal;
@@ -400,6 +399,7 @@ body {
   .page__establish {
     position: relative; }
 
+/*---------------------------- Main Block -------------------------------*/
 .main-block__wrapper {
   padding-top: 261px; }
   @media (max-width: 1727px) {
@@ -519,6 +519,7 @@ body {
     .main-block__button:hover {
       border: solid 1px #000; } }
 
+/*------------------------------ Feature ---------------------------------*/
 .feature__body {
   position: relative;
   padding-top: 191px;
@@ -644,10 +645,7 @@ body {
       .items-future__symbol img {
         width: calc(30px + 156 * ((100vw - 320px) / 1407)); } }
 
-@media (max-width: 766.98px) {
-  .pricing__wrapper {
-    background-color: #f2f2f2; } }
-
+/*------------------------------- Pricing -------------------------------*/
 .pricing__body {
   min-width: 1458px;
   position: relative;
@@ -662,30 +660,13 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 2;
-  padding-top: 130px; }
+  padding-top: 100px; }
   @media (max-width: 1727px) {
     .pricing__body {
       min-width: calc(290px + 1168 * ((100vw - 320px) / 1407)); } }
   @media (max-width: 1727px) {
     .pricing__body {
-      padding-top: calc(30px + 100 * ((100vw - 320px) / 1407)); } }
-  .pricing__body::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background-color: #1c2547;
-    opacity: 0.2;
-    -webkit-filter: blur(236.606px);
-            filter: blur(236.606px);
-    z-index: -1; }
-    @media (max-width: 1200px) {
-      .pricing__body::after {
-        height: 85%; } }
+      padding-top: calc(30px + 70 * ((100vw - 320px) / 1407)); } }
   @media (min-width: 1200px) {
     .pricing__body {
       -webkit-box-orient: horizontal;
@@ -702,13 +683,13 @@ body {
           flex: 0 1 27.3885350318%; }
   @media (min-width: 1200px) {
     .pricing__column:nth-child(2) {
-      background-color: #fff; } }
+      background-color: rgba(241, 241, 241, 0.8); } }
 
 .pricing__table {
   max-width: 473px;
   min-height: 677px;
   padding: 28.39px;
-  background-color: #fff;
+  background-color: rgba(241, 241, 241, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,6 +829,7 @@ body {
     .pricing__button:hover {
       background-color: #f7dfeb; } }
 
+/*----------------------------------- Modern ----------------------------*/
 .modern__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -928,6 +910,7 @@ body {
       .list-modern__item::before {
         padding-right: calc(10px + 9 * ((100vw - 320px) / 1407)); } }
 
+/*----------------------------------- Work ------------------------------*/
 .work__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -989,6 +972,7 @@ body {
   .work__image {
     margin-top: 20px; } }
 
+/*----------------------------- Contact ---------------------------------*/
 .contact__wrapper {
   margin-bottom: 89px; }
   @media (max-width: 1727px) {
@@ -1013,35 +997,20 @@ body {
     .contact__title {
       margin-bottom: calc(30px + 50 * ((100vw - 320px) / 1407)); } }
 
-.contact__form {
-  position: relative; }
-  .contact__form::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(51, 51, 51, 0.9) url("../img/icons/loading.gif") center/50px no-repeat;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; }
-  .contact__form._sending::after {
-    opacity: 1;
-    visibility: visible; }
-  @media (min-width: 1200px) {
-    .contact__form {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
+.contact__form._sending .form__button::after {
+  opacity: 1;
+  visibility: visible; }
+
+@media (min-width: 1200px) {
+  .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 .contact__success {
   -webkit-transition: all 0.3s ease 0s;
@@ -1209,6 +1178,7 @@ body {
       display: block; } }
 
 .form__button {
+  position: relative;
   padding: 0 50px;
   min-height: 56px;
   border-radius: 5px;
@@ -1219,6 +1189,20 @@ body {
   @media (min-width: 479.98px) and (max-width: 766.98px) {
     .form__button {
       margin-top: 30px; } }
+  .form__button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5) url("../img/icons/loading.gif") center/50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
 
 .checkbox__input {
   display: none; }
@@ -1265,6 +1249,7 @@ body {
     -webkit-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s; }
 
+/*------------------------------ Establish ------------------------------*/
 .establish__body {
   padding-top: 126px;
   padding-bottom: 166px;
