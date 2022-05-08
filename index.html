@@ -1,197 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/styles.css">
-	<title>Restaurant</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Internet Shop</title>
 </head>
 
 <body>
 	<div class="wrapper">
+		<!-- with popup use class: _lock-padding -->
 <header class="header">
-	<div class="header__wrapper">
-		<div class="header__container _container">
-			<div class="header__body">
-				<div class="header__main">
-					<a href="#" class="header__logo _ibg">
-						<img src="img/logo.png" alt="Logo">
-					</a>
+	<div class="header__top top-header">
+		<div class="top-header__container _container">
+			<div class="top-header__body">
+				<div class="top-header__column top-header__column_login">
+					<a href="" class="top-header__login">Login / Signup</a>
+					<div class="top-header__currencies select__wrapper select__wrapper_triangle">
+						<select class="select__body">
+							<option value="usd">USD</option>
+							<option value="eur">EUR</option>
+							<option value="uah">UAH</option>
+						</select>
+					</div>
 				</div>
-				<div class="header__menu menu">
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">Home</a></li>
-							<li class="menu__item"><a href="" class="menu__link">menu</a></li>
-							<li class="menu__item"><a href="" class="menu__link">reservation</a></li>
-							<li class="menu__item"><a href="" class="menu__link">recipe</a></li>
-							<li class="menu__item"><a href="" class="menu__link">blog</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Pages </a></li>
-							<li class="menu__item"><a href="" class="menu__link">contact</a></li>
-						</ul>
-					</nav>
+				<div class="top-header__column top-header__column_actions">
+					<ul class="top-header__actions actions">
+						<li class="actions__item">
+							<a href="" class="actions__link">Help</a>
+						</li>
+						<li class="actions__item">
+							<a href="" class="actions__link _icon-heart">Wishlist</a>
+						</li>
+					</ul>
+					<div class="top-header__languages select__wrapper select__wrapper_triangle">
+						<select class="select__body">
+							<option value="eng">English</option>
+							<option value="esp">Espana</option>
+							<option value="ukr">Українська</option>
+						</select>
+					</div>
+					<a href="" class="top-header__app">Download App</a>
 				</div>
-
-				<div class="header__button">
-					<button type="button" class="button__link button">
-						<img src="img/icons/order.png" class="button__icon _ibg" alt="Order-Icon">
-						<div class="button__text">Book your table</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__main main-header">
+		<div class="main-header__container _container">
+			<div class="main-header__body">
+				<a href="" class="main-header__logo logo">
+					<img src="img/Logo.png" alt="logo">
+					<span>SuperMart</span>
+				</a>
+				<div class="main-header__search search-header">
+					<div class="search-header__form">
+						<form class="search-header__item">
+							<input type="text" class="form__input" placeholder="Search...">
+							<div class="main-header__categories select__wrapper select__wrapper_arrow _icon-arrow-right">
+								<select class="select__body">
+									<option value="all">All Categories</option>
+									<option value="arts">Arts &amp; Crafts</option>
+									<option value="automative">Automotive</option>
+								</select>
+							</div>
+							<button type="submit" class="form__submit _icon-search btn btn_yellow"></button>
+						</form>
+					</div>
+				</div>
+				<a href="" class="main-header__cart cart-header _icon-header-busker">
+					<div class="cart-header__quantity">
+						<span class="cart-header__number">0</span>
+						<span class="cart-header__text">&nbsp;Item:&nbsp;</span>
+						<span class="cart-header__sum">$0.00</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom bottom-header">
+		<div class="bottom-header__wrapper">
+			<div class="bottom-header__container _container">
+				<div class="bottom-header__departments departments">
+					<div class="departments__title">
+						<span>Departments</span>
+						<button type="button" class="departments__icon icon-departments">
+							<span class="icon-departments__symbol"></span>
+						</button>
+					</div>
+				</div>
+				<div class="bottom-header__main">
+					<div class="bottom-header__menu menu">
+						<nav class="menu__body">
+							<ul data-spollers="992, max" class="menu__list">
+								<li><a href="" class="menu__link">Home</a></li>
+								<li><a href="" class="menu__link">Shop</a>
+									<button data-spoller type="button" class="menu__arrow _icon-arrow-right"></button>
+									<ul class="menu__sub-list">
+										<li><a href="" class="menu__sub-link">Mobile Accessories</a></li>
+										<li><a href="" class="menu__sub-link">Hitech</a></li>
+										<li><a href="" class="menu__sub-link">Unboxed Mobiles</a></li>
+										<li><a href="" class="menu__sub-link">Bluetooth Devices</a></li>
+										<li><a href="" class="menu__sub-link">Home Appliance</a></li>
+										<li><a href="" class="menu__sub-link">Screen Guards</a></li>
+										<li><a href="" class="menu__sub-link">Desktop & Laptop</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="menu__labels">
+										<div class="menu__label menu__label_hot">HOT</div>
+									</div>
+									<a href="" class="menu__link">Fashion</a>
+								</li>
+								<li>
+									<div class="menu__labels">
+										<div class="menu__label menu__label_new">New</div>
+									</div>
+									<a href="" class="menu__link">Electronics</a>
+								</li>
+								<li><a href="" class="menu__link">pages</a></li>
+								<li><a href="" class="menu__link">Features</a></li>
+								<li><a href="" class="menu__link">BLog</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="bottom-header__contact _icon-mobile">
+						<p>Call US Free:</p>
+						<a href="tel:1-800-777-7889" class="bottom-header__phone">1-800-777-7889</a>
+					</div>
+					<button type="button" class="icon-menu">
+						<span class="icon-menu__symbol"></span>
 					</button>
 				</div>
-				<button type="button" class="icon-menu">
-					<span class="icon-menu__symbol"></span>
-					<span class="icon-menu__symbol"></span>
-					<span class="icon-menu__symbol"></span>
-				</button>
 			</div>
 		</div>
 	</div>
-</header>		<main class="page">
-			<section class="page__main-block main-block">
-				<div class="main-block__container _container">
-					<div class="main-block__body">
-						<h1 class="main-block__title title">Teast your fav dish</h1>
-						<div class="main-block__subtitle">from<span class="main-block__subtitle_orange">luxury
-								restaurent.</span>
-						</div>
-					</div>
-				</div>
-				<div class="main-block__image _ibg">
-					<img src="img/banner.jpg" alt="Banner-image">
-				</div>
-			</section>
-			<section class="page__contact contact">
-				<div class="contact__container _container">
-					<div class="contact__wrapper">
-						<div class="contact__body">
-							<img src="img/contacts/icon-phone.png" class="contact__icon" alt="icon-phone">
-							<div class="contact__text">Call us Now for<br><span class="contact__text_orange">
-									Home Delivery</span></div>
-							<a href="tel:1-008 005 006" class="contact__phone">1-008 005 006</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="page__about about">
-				<div class="about__container _container">
-					<div class="about__wrapper">
-						<div class="about__column">
-							<h2 class="about__title title">About Restaurent</h2>
-							<div class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-								printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-								only five centuries, but also the leap into electronic typesetting, remaining essentially
-								unchanged...</div>
-							<button type="button" class="about__button button">Read more</button>
-						</div>
-						<div class="about__column">
-							<div class="about__gallery gallery">
-								<div class="gallery__item">
-									<img src="img/about/about1.jpg" class="gallery__image" alt="image">
+</header>
+		<main class="page">
+			<div class="page__container _container">
+				<aside class="page__aside aside">
+					<nav class="aside__departments departments">
+						<ul class="departments__list">
+							<li><a href="" class="departments__link _icon-display">Fashion & Clothing</a></li>
+							<li><a href="" class="departments__link _icon-mobile">Mobile Phones</a></li>
+							<li><a href="" class="departments__link _icon-ball">Sports & Outerwear</a></li>
+							<li><a href="" class="departments__link _icon-leaf">Foods & Fruits</a></li>
+							<li><a href="" class="departments__link _icon-tags">Beauty & Health</a></li>
+							<li><a href="" class="departments__link _icon-basket">Shoes & Bags</a></li>
+							<li><a href="" class="departments__link _icon-cabinet">Decors & Home</a></li>
+							<li><a href="" class="departments__link _icon-power">Electronics & Hitech</a></li>
+							<li><a href="" class="departments__link _icon-headphones">Accessories</a></li>
+							<li><a href="" class="departments__link _icon-appleinc">Digital Software</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<div class="page__slider main-slider">
+					<div class="main-slider__body swiper">
+						<div class="swiper-wrapper">
+							<div class="main-slider__slide swiper-slide">
+								<div class="main-slider__content content-mainsider">
+									<h1 class="content-mainsider__title">Upto 50% Offer!</h1>
+									<div class="content-mainsider__subtitle">For all Men’s Collections</div>
+									<button type="button" class="content-mainsider__button btn btn_white">Shop Now</button>
 								</div>
-								<div class="gallery__item">
-									<img src="img/about/about2.jpg" class="gallery__image" alt="image">
+								<div class="content-mainsider__image _ibg">
+									<img src="img/slider/slide-1.jpg" alt="slide-1">
 								</div>
-								<div class="gallery__item">
-									<img src="img/about/about3.jpg" class="gallery__image" alt="image">
+							</div>
+							<div class="main-slider__slide swiper-slide">
+								<div class="main-slider__content content-mainsider">
+
 								</div>
-								<div class="gallery__item">
-									<img src="img/about/about4.jpg" class="gallery__image" alt="image">
+								<div class="content-mainsider__image _ibg">
+									<img src="img/slider/slide-2.jpg" alt="slide-1">
+								</div>
+							</div>
+							<div class="main-slider__slide swiper-slide">
+								<div class="main-slider__content content-mainsider">
+
+								</div>
+								<div class="content-mainsider__image _ibg">
+									<img src="img/slider/slide-3.jpg" alt="slide-1">
 								</div>
 							</div>
 						</div>
+						<div class="main-slider__dotts swiper-pagination"></div>
 					</div>
 				</div>
-			</section>
-			<section class="page__special special">
-				<div class="special__container _container">
-					<div class="special__wrapper">
-						<div class="special__body">
-							<h2 class="special__title title">Today Special</h2>
-							<div class="special__cards cards-special">
-								<div class="cards-special__card">
-									<div class="cards-special__top">
-										<div class="cards-special__image _ibg">
-											<img src="img/special/1.jpg" alt="dish">
-										</div>
-									</div>
-									<div class="cards-special__body">
-										<h3 class="cards-special__title">Food Name one</h3>
-										<div class="cards-special__text">printing and typesetting industry. Lorem Ipsum has been
-											the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-											galley of type and scrambled.</div>
-										<span class="card-special__line"></span>
-									</div>
-									<div class="cards-special__bottom">
-										<div class="cards-special__cta">Home<br>
-											<span class="cards-special__cta_pink">Delivery</span>
-										</div>
-										<a href="tel:1-008-005-006" class="cards-special__phone">
-											<img src="img/contacts/icon-phone.png" class="contact__icon"
-												alt="icon-phone"><span>1-008-005-006</span></a>
-										<div class="cards-special__price"><span class="cards-special__price_curency">$</span>89.00
-										</div>
-									</div>
-								</div>
-								<div class="cards-special__card">
-									<div class="cards-special__top">
-										<div class="cards-special__image _ibg">
-											<img src="img/special/2.jpg" alt="dish">
-										</div>
-									</div>
-									<div class="cards-special__body">
-										<h3 class="cards-special__title">Food Name two</h3>
-										<div class="cards-special__text">printing and typesetting industry. Lorem Ipsum has been
-											the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-											galley of type and scrambled.</div>
-										<span class="card-special__line"></span>
-									</div>
-									<div class="cards-special__bottom">
-										<div class="cards-special__cta">Home<br>
-											<span class="cards-special__cta_pink">Delivery</span>
-										</div>
-										<a href="tel:1-008-005-006" class="cards-special__phone">
-											<img src="img/contacts/icon-phone.png" class="contact__icon"
-												alt="icon-phone"><span>1-008-005-006</span></a>
-										<div class="cards-special__price"><span class="cards-special__price_curency">$</span>89.00
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="special__image _ibg">
-						<img src="img/special/banner-special.jpg" alt="banner">
-					</div>
-				</div>
-			</section>
+			</div>
 		</main>
-<footer class="footer">
-	<div class="footer__container _container">
-		<div class="footer__wrapper">
-			<div class="footer__social-icons">
-				<div class="footer__social-icon social-icon">
-					<a href="" class="social-icon__facebook">
-						<img src="img/icons/fb.png" alt="icon-facebook">
-					</a>
-					<a href="" class="social-icon__twitter">
-						<img src="img/icons/tw.png" alt="icon-twitter">
-					</a>
-					<a href="" class="social-icon__google">
-						<img src="img/icons/g.png" alt="icon-google">
-					</a>
+	</div>
+	<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__top top-footer">
+			<div class="_container">
+				<div class="top-footer__body">
+					<div class="top-footer__subscribe subscribe">
+						<div class="subscribe__title _icon-plane">SIGNUP to <br>NEWSLETTER</br></div>
+						<form action="#" class="subscribe__form">
+							<input type="text" placeholder="Enter Your Email Address" class="subscribe__input form__input">
+							<button type="submin" class="subscribe__submit btn btn_yellow">Submit</button>
+						</form>
+					</div>
+					<div class="top-footer__social-icons social-icons">
+						<div class="social-icons__title">Keep in touch</div>
+						<ul class="social-icons__list">
+							<li><a href="" class="social-icons__icon _icon-twitter"></a></li>
+							<li><a href="" class="social-icons__icon _icon-facebook"></a></li>
+							<li><a href="" class="social-icons__icon _icon-instagram"></a></li>
+							<li><a href="" class="social-icons__icon _icon-pinterest"></a></li>
+							<li><a href="" class="social-icons__icon _icon-vimeo"></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="footer__bottom">
-				<span class="footer__line"></span>
-				<div class="footer__copy">2018 &copy; All rights reserved</div>
-				<span class="footer__line"></span>
+		</div>
+		<div class="footer__main main-footer">
+			<div class="_container">
+				<div class="main-footer__body">
+					<div class="main-footer__column main-footer__column_main">
+						<a href="" class="footer-main__logo logo">
+							<img src="img/logo-footer.png" alt="logo">
+							<span>SuperMart</span>
+						</a>
+						<div class="main-footer__text">
+							Many say exploration is part of our dest but it’s actually our duty to future and their.</div>
+						<div class="main-footer__contacts">
+							<div class="main-footer__adress"><b>Address:&nbsp;</b>868 Fake Street, New York</div>
+							<a href="tel:080847521499" class="main-footer__phone"><b>Phone:&nbsp;</b>(08) 08 4752 1499</a>
+							<a href="mailto:" class="main-footer__email">
+								<b>Email:&nbsp;</b>info@supermart.com
+							</a>
+						</div>
+					</div>
+					<div class="main-footer__menu menu-footer">
+						<div data-spollers="480,max" class="menu-footer__column">
+							<button data-spoller type="button" class="menu-footer__title _icon-arrow-right">COMPANY</button>
+							<ul class="menu-footer__list">
+								<li><a href="" class="menu-footer__link">Discount Vouches</a></li>
+								<li><a href="" class="menu-footer__link">Spring Collection</a></li>
+								<li><a href="" class="menu-footer__link">Trending</a></li>
+								<li><a href="" class="menu-footer__link">Best Sellers</a></li>
+								<li><a href="" class="menu-footer__link">Special Deals</a></li>
+							</ul>
+						</div>
+						<div data-spollers="480,max" class="menu-footer__column">
+							<button data-spoller type="button" class="menu-footer__title _icon-arrow-right">POLICY
+								INFO</button>
+							<ul class="menu-footer__list">
+								<li><a href="" class="menu-footer__link">Orders & Returns</a></li>
+								<li><a href="" class="menu-footer__link">Advanced Search</a></li>
+								<li><a href="" class="menu-footer__link">Help & FAQs</a></li>
+								<li><a href="" class="menu-footer__link">Consultant</a></li>
+								<li><a href="" class="menu-footer__link">Store Locations</a></li>
+							</ul>
+						</div>
+						<div data-spollers="480,max" class="menu-footer__column">
+							<button data-spoller type="button" class="menu-footer__title _icon-arrow-right">My Account</button>
+							<ul class="menu-footer__list">
+								<li><a href="" class="menu-footer__link">About Us</a></li>
+								<li><a href="" class="menu-footer__link">Delivery Information</a></li>
+								<li><a href="" class="menu-footer__link">Privacy Policy</a></li>
+								<li><a href="" class="menu-footer__link">Terms & Conditions</a></li>
+								<li><a href="" class="menu-footer__link">Custom Link</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright">
+			<div class="_container">
+				&copy; Copyright - Supermart Template by DesignFalls
 			</div>
 		</div>
 	</div>
-</footer>	</div>
-	<script src="js/script.js"></script>
+</footer>
+	
+	</div>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
 </body>
 
 </html>
